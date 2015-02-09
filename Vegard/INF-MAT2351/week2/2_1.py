@@ -27,7 +27,7 @@ def schemes(T,N,show_plot=True):
 for i in range(3,12):
 	N = 2**i
 	e_y,e_z = schemes(1,N,False)
-	print e_y*N, e_z
+	print e_y*N, e_z*N
 
 
 
