@@ -1,6 +1,0 @@
-from matplotlib.pylab import *
-
-t = linspace(0,5,101)
-
-for i in range(12):
-    x = 0.2*i
