@@ -17,10 +17,9 @@ t = linspace(1800,1980,181)
 year = append(year,1980)
 pop = append(pop,226.5)
 
-t = linspace(1800,2015,216)
-year = append(year,2015)
-pop = append(pop,320.2)
-print year,pop
+#t = linspace(1800,2015,216)
+#year = append(year,2015)
+#pop = append(pop,320.2)    #2015 included
 
 
 subplot(1,2,2)
@@ -51,6 +50,7 @@ import scipy.optimize as sc
 '''
 scipy.optimize.fmin returns parameters that minimizes
 the function in the input argument, here: minimizer
+(everyone might not have this module installed)
 '''
 xopt = sc.fmin(func=minimizer,x0=x0)
 
@@ -60,3 +60,6 @@ print 'a = %.4f   r0 = %.4f   R = %.4f' %(xopt[0],xopt[1],xopt[2])
 plot(t,r_log(xopt,t),t,r_log(x0,t),'-',year,pop,'o')
 legend(['optimized','initial guess','data'],loc='upper left')
 show()
+# with 2015: a = 0.0215   r0 = 9.2306   R = 473.2189
+# without 2015: a = 0.0288   r0 = 5.8294   R = 287.7501
+

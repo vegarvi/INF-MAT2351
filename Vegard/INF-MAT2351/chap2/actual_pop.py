@@ -38,15 +38,18 @@ import scipy.optimize as sc
 '''
 scipy.optimize.fmin returns parameters that minimizes
 the function in the input argument, here: minimizer
+(everyone might not have this module installed)
 '''
 xopt = sc.fmin(func=minimizer,x0=x0)
 
 print 'Optimal parameters:'
 print 'a = %.4f   r0 = %.4f   R = %.4f' %(xopt[0],xopt[1],xopt[2])
 
-plot(t,r_log(xopt,t),t,r_log(x0,t),'-',year,pop,'o')
+
+plot(t,r_log(xopt,t),t,r_log(x0,t),'-',year,pop,'--')
 legend(['optimized','initial guess','data'],loc='upper left')
 show()
+# result is: a = 0.0214   r0 = 5.8023   R = 457.0535
 
 
 
