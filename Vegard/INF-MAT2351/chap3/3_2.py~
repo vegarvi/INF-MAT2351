@@ -6,6 +6,7 @@ def F_S(S0, F0, dt):
 	F = zeros(N+1)
 	S = zeros(N+1)
 	F[0],S[0] = F0,S0
+	K2 = zeros(N+1)
 	for n in range(N):
 		F[n+1] = F[n] + dt*(2-S[n])*F[n]
 		S[n+1] = S[n] + dt*(F[n]-1)*S[n]
