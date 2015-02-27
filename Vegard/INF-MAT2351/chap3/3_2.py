@@ -13,8 +13,8 @@ def F_S(S0, F0, dt):
 	K = exp(F)*exp(S)/(F*S**2)	
 	
 
-	plot(t,(K-K[0]/K[0]))
-	axis([0,T,19,27])
+	plot(t,K)
+	axis([0,T,K[0],23])
 	hold('on')
 	return (K[N]-K[0])/(K[0]*dt)
 F0 = 1.9
