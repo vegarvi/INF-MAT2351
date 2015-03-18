@@ -17,6 +17,6 @@ for pair in pairs:
 	x0 = 1			# initial guess
 	y = pair[0]
 	dy = pair[1]
-	x4 = Newton(y,dy,x0,4,tol=1E-18)
+	x4 = Newton(y,dy,x0,4,tol=0)
 	print 'f(x4) = %g' %y(x4)
 

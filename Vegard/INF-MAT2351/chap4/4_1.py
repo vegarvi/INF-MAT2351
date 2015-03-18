@@ -10,5 +10,5 @@ show()
 print f(0)
 
 x0 = 1
-x4 = Newton(f,df,x0,4,tol=1E-18)
+x4 = Newton(f,df,x0,4,tol=0)
 print 'f(x4) = %g' %f(x4)
