@@ -14,7 +14,7 @@ x = linspace(0,L,n)
 dt = t[1]-t[0]
 dx = x[1]-x[0]
 
-print dt/dx**2
+print dt/dx**2    # must be less than or equal to 0.5
 
 a = 5.0
 b = 4.0
@@ -30,8 +30,20 @@ for l in range(m-1):
 	u[0,l+1] = b*t[l+1] + c
 	u[n-1,l+1] = a*L + c + b*t[l+1]
 
-plot(x,u[:,m-1],x,(a*x + b*t[m-1] + c))
+
+print (a*x + b*t[-1] + c) - u[:,-1]
+
+
+#example of surface plot
+X,T = meshgrid(x,t)
+u = transpose(u)	# check shape of X,T and u. (Must be the same)
+
+from mpl_toolkits.mplot3d import Axes3D
+fig = figure()
+ax = fig.add_subplot(111,projection='3d')
+surf = ax.plot_surface(X,T,u)
 show()
+
 
 
 
