@@ -34,7 +34,7 @@ for l in range(m-1):
 print (a*x + b*t[-1] + c) - u[:,-1]
 
 
-#example of surface plot
+# example of surface plot
 X,T = meshgrid(x,t)
 u = transpose(u)	# check shape of X,T and u. (Must be the same)
 
