@@ -32,5 +32,5 @@ print u[len(u)/2]
 plot(u)
 show()
 
-T = 0.1
+T = 0.2
 u2 = diffusion7_13(I,N0,N1,k,f,L,T,dx,dt,show_plot=True)

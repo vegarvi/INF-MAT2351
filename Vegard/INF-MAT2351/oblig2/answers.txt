@@ -1,0 +1,29 @@
+*Output from the program BeerAssignment.py, which can be sent by request: vegarvi@student.matnat.uio.no
+
+m)
+h_T = inf  -->   t_bar =  0.479158448389
+h_T = 5  -->  t_bar =  4.5446416831
+n)
+h_T = inf  -->   t_bar =  0.330046022354
+h_T = 5  -->  t_bar =  4.41551610782
+o)
+h_T = inf  -->   t =  3553.04135174
+h_T = 5  -->  t =  33699.2906693
+p)
+h_T = inf  -->   t =  1560.06206443
+h_T = 5  -->  t =  22948.5129678
+q)
+h_T = inf  -->   t =  2447.34736358
+h_T = 5  -->  t =  32741.8025773
+
+ EXERCISE r) 
+
+o)
+ h_T = 10 -->  t =  18439.5108481
+ h_T = 18 -->  t =  11686.5470085
+p)
+ h_T = 10 -->  t =  12228.6561473
+ h_T = 18 -->  t =  7470.57593688
+q)
+ h_T = 10 -->  t =  17470.3445102
+ h_T = 18 -->  t =  10703.7304405
