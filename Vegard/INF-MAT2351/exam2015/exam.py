@@ -6,15 +6,15 @@ def e1():
 	a = 1.0
 	b = 1.2
 
-	print 'Trapezoid approx:', (b-a)*0.5*(1.0/b+1.0/a)
+	print '1a) Trapezoid approx:', (b-a)*0.5*(1.0/b+1.0/a)
 	print 'log(1.2) = ', log(1.2)
 
-	dt = 0.2
+	dt = 0.1
 
-	y0 = 0
+	y0 = 1
 
-	y1 = y0 + (b-a)*0.5*(1.0/b+1.0/a)
-	print 'y1 = ',y1
+	y1 = y0*(1+dt/2.0)/(1-dt/2.0)
+	print '\n1c) y1 = ',y1
 	print '\n \n'	
 	
 #2)
@@ -38,7 +38,7 @@ def e2():
 	f = lambda t: y[0]*exp(alpha*t)
 	ti = linspace(0,20,201)
 
-	plt.plot(t,y,ti,f(ti))
+	plt.plot(t,y,'o',ti,f(ti))
 
 
 	# Set: dy/y = alpha*(1-y/beta)
@@ -56,6 +56,7 @@ def e2():
 	print 'beta = ', beta
 	g = lambda t: (y[0]*beta)/(y[0]+exp(-alpha*t)*(beta-y[0]))
 	plt.plot(ti,g(ti))
+	plt.legend(['data','expo','logistic'],'upper left')
 	plt.show()
 
 
