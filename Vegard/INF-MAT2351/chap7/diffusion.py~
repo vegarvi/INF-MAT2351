@@ -68,7 +68,7 @@ def diffusion7_13(I,D0,D1,k,f,L,T,dx,dt,show_plot=False):
 		if show_plot:
 			clf()
 			plot(x,u_new)
-			axis([0, L, -2, 10])
+			axis([0, L, 0, 50])
 			draw()
 	hold('on')
 	return u_new
